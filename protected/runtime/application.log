@@ -1,0 +1,17 @@
+2012/12/04 16:12:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('project/admin')
+#9 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/index
+---
