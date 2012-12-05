@@ -15,3 +15,34 @@ Stack trace:
 REQUEST_URI=/tours/yii/trackstar/index.php?r=project/admin
 HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/index
 ---
+2012/12/05 13:55:59 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/home/dengwei/var/www/tutorials/yii/trackstar/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /home/dengwei/var/www/tutorials/yii/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /home/dengwei/var/www/tutorials/yii/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/home/dengwei/v...')
+#1 /home/dengwei/var/www/tutorials/yii/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /home/dengwei/var/www/tutorials/yii/framework/gii/GiiModule.php(143): CAssetManager->publish('/home/dengwei/v...')
+#3 /home/dengwei/var/www/tutorials/yii/framework/base/CComponent.php(112): GiiModule->getAssetsUrl()
+#4 /home/dengwei/var/www/tutorials/yii/framework/base/CModule.php(106): CComponent->__get('assetsUrl')
+#5 /home/dengwei/var/www/tutorials/yii/framework/gii/views/layouts/main.php(5): CModule->__get('assetsUrl')
+#6 /home/dengwei/var/www/tutorials/yii/framework/web/CBaseController.php(127): require('/home/dengwei/v...')
+#7 /home/dengwei/var/www/tutorials/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/dengwei/v...', Array, true)
+#8 /home/dengwei/var/www/tutorials/yii/framework/web/widgets/CContentDecorator.php(77): CBaseController->renderFile('/home/dengwei/v...', Array, true)
+#9 /home/dengwei/var/www/tutorials/yii/framework/web/widgets/CContentDecorator.php(55): CContentDecorator->decorate('<div class="con...')
+#10 /home/dengwei/var/www/tutorials/yii/framework/web/widgets/COutputProcessor.php(45): CContentDecorator->processOutput('<div class="con...')
+#11 /home/dengwei/var/www/tutorials/yii/framework/web/CBaseController.php(207): COutputProcessor->run()
+#12 /home/dengwei/var/www/tutorials/yii/framework/web/CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#13 /home/dengwei/var/www/tutorials/yii/framework/gii/views/layouts/column1.php(7): CBaseController->endContent()
+#14 /home/dengwei/var/www/tutorials/yii/framework/web/CBaseController.php(127): require('/home/dengwei/v...')
+#15 /home/dengwei/var/www/tutorials/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/dengwei/v...', Array, true)
+#16 /home/dengwei/var/www/tutorials/yii/framework/web/CController.php(785): CBaseController->renderFile('/home/dengwei/v...', Array, true)
+#17 /home/dengwei/var/www/tutorials/yii/framework/gii/controllers/DefaultController.php(17): CController->render('index')
+#18 /home/dengwei/var/www/tutorials/yii/framework/web/actions/CInlineAction.php(50): DefaultController->actionIndex()
+#19 /home/dengwei/var/www/tutorials/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#20 /home/dengwei/var/www/tutorials/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#21 /home/dengwei/var/www/tutorials/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/dengwei/var/www/tutorials/yii/framework/web/CWebApplication.php(283): CController->run('')
+#23 /home/dengwei/var/www/tutorials/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
+#24 /home/dengwei/var/www/tutorials/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /home/dengwei/var/www/tutorials/yii/trackstar/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/tutorials/yii/trackstar/index.php?r=gii
+---
