@@ -1,6 +1,12 @@
 <?php
 class IssueTest extends CDbTestCase 
 {
+
+    public $fixtures=array(
+            'projects'=>'Project', 
+            'issues'=>'Issue',
+    );
+        
     public function testGetTypes() 
     {
         $options = Issue::model()->typeOptions;
@@ -21,6 +27,16 @@ class IssueTest extends CDbTestCase
         $this->assertTrue(in_array('Not Yet Started', $options));
         $this->assertTrue(in_array('Started', $options));
         $this->assertTrue(in_array('Finished', $options));
+    }
+    
+    public function testGetStatusText() 
+    {
+         $this->assertTrue('Started' == $this->issues('issueBug')->getStatusText());
+    }
+    
+    public function testGetTypeText()
+    {
+        $this->assertTrue('Bug' == $this->issues('issueBug')->getTypeText());
     }
  
 }

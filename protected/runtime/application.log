@@ -46,3 +46,115 @@ Stack trace:
 #26 {main}
 REQUEST_URI=/tutorials/yii/trackstar/index.php?r=gii
 ---
+2012/12/05 15:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=site/login
+---
+2012/12/05 15:04:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue
+---
+2012/12/05 15:05:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue
+---
+2012/12/05 15:05:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject('1')
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/create&pid=1
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue
+---
+2012/12/05 15:08:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('project/admin')
+#9 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project
+---
+2012/12/05 16:01:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/admin')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/index&pid=1
+---

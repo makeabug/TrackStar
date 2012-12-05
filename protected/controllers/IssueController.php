@@ -7,6 +7,11 @@ class IssueController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	
+	/**
+     * @var private property containing the associated Project model instance.
+     */
+    private $_project = null;
 
 	/**
 	 * @return array action filters
@@ -16,8 +21,44 @@ class IssueController extends Controller
 		return array(
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
+			'projectContext + create index admin', //check to ensure valid project context
 		);
 	}
+	
+	public function filterProjectContext($filterChain)
+	{
+	    $projectId = null;
+	    if (isset($_GET['pid']))
+	       $projectId = $_GET['pid'];
+	    else 
+	       if (isset($_POST['pid']))
+	           $projectId = $_POST['pid'];
+	           
+	    $this->loadProject($projectId);
+	    $filterChain->run();
+	}
+	
+	/**
+     * Protected method to load the associated Project model class
+     * @project_id the primary identifier of the associated Project
+     * @return object the Project data model based on the primary key
+     */
+    protected function loadProject($project_id) 
+    {
+        if ($this->_project === null)
+        {
+            $this->_project = Project::model()->findByPk($project_id);
+            if ($this->_project === null)
+                throw new CHttpException(404, 'The requested project does not exist.');
+        }
+        
+        return $this->_project;
+    }
+    
+    protected function getProject()
+    {
+        return $this->_project;
+    }
 
 	/**
 	 * Specifies the access control rules.
@@ -63,6 +104,7 @@ class IssueController extends Controller
 	public function actionCreate()
 	{
 		$model=new Issue;
+		$model->project_id = $this->_project->id;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -122,10 +164,18 @@ class IssueController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Issue');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+		$dataProvider = new CActiveDataProvider('Issue',array(
+            'criteria' => array(
+                'condition' => 'project_id=:projectId',
+                'params' => array(
+                    ':projectId' => $this->_project->id),
+                ),
+            )
+        );
+        
+        $this->render('index', array(
+            'dataProvider' => $dataProvider,
+        ));
 	}
 
 	/**
@@ -133,14 +183,15 @@ class IssueController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Issue('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Issue']))
-			$model->attributes=$_GET['Issue'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
+        $model = new Issue('search');
+        if (isset($_GET['Issue']))
+            $model->attributes = $_GET['Issue'];
+        
+        $model->project_id = $this->_project->id; 
+        
+        $this->render('admin', array(
+            'model' => $model,
+        ));
 	}
 
 	/**
