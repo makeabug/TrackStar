@@ -16,18 +16,21 @@ class ProjectTest extends CDbTestCase
         $newProject->setAttributes(array( 
             'name' => $newProjectName, 
             'description' => 'This is a test for new project creation', 
-            'createTime' => '2009-09-09 00:00:00', 
+            /*'createTime' => '2009-09-09 00:00:00', 
             'createUser' => '1', 
             'updateTime' => '2009-09-09 00:00:00', 
-            'updateUser' => '1', 
+            'updateUser' => '1', */
         ));
+        
+        Yii::app()->user->setId($this->users('user1')->id);
  
         $this->assertTrue($newProject->save(false)); 
         
         //READ back the newly created Project to ensure the creation worked
         $retrievedProject=Project::model()->findByPk($newProject->id);
         $this->assertTrue($retrievedProject instanceof Project);
-        $this->assertEquals($newProjectName,$retrievedProject->name);
+        $this->assertEquals($newProjectName, $retrievedProject->name);
+        $this->assertEquals(Yii::app()->user->id, $retrievedProject->create_user_id);
     }
     
     public function testRead() 

@@ -12,7 +12,7 @@
  * @property string $update_time
  * @property integer $update_user_id
  */
-class Project extends CActiveRecord
+class Project extends TrackStarActiveRecord 
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -42,7 +42,7 @@ class Project extends CActiveRecord
 		return array(
 			array('create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>128),
-			array('description, create_time, update_time', 'safe'),
+			array('description', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, description, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
