@@ -79,6 +79,11 @@ return array(
 				*/
 			),
 		),
+		
+	   'authManager' => array(
+            'class' => 'CDbAuthManager',
+            'connectionID' => 'db',
+        ),
 	),
 
 	// application-level parameters that can be accessed
@@ -87,4 +92,5 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+
 );
