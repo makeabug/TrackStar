@@ -12,18 +12,8 @@ abstract class TrackStarActiveRecord extends CActiveRecord
             $this->update_time = new CDbException('NOW()');
             $this->update_user_id = Yii::app()->user->id;
         }
-        
+            
         return parent::beforeValidate();
     }
     
-    protected function afterValidate()
-    {
-        parent::afterValidate();
-        $this->password = $this->encrypt($this->password);
-    }
-    
-    public function encrypt($value)
-    {
-        return md5($value);
-    }
 }

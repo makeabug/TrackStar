@@ -117,4 +117,15 @@ class User extends TrackStarActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	protected function afterValidate()
+    {
+        parent::afterValidate();
+        $this->password = $this->encrypt($this->password);
+    }
+    
+    public function encrypt($value)
+    {
+        return md5($value);
+    }
 }
