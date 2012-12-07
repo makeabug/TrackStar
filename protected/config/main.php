@@ -84,6 +84,14 @@ return array(
             'class' => 'CDbAuthManager',
             'connectionID' => 'db',
         ),
+        
+        'urlManager' => array(
+            'urlFormat' => 'path',
+            'rules' => array(       
+                '<pid:\d+>/commentfeed'=>array('site/ commentFeed', 'urlSuffix'=>'.xml', 'caseSensitive'=>false),
+                'commentfeed' => array('comment/feed', 'urlSuffix'=>'.xml', 'caseSensitive'=>false)
+            ),
+        )
 	),
 
 	// application-level parameters that can be accessed

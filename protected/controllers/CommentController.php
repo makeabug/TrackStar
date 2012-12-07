@@ -1,4 +1,7 @@
 <?php
+Yii::import('application.vendors.*');
+require_once('Zend/Feed.php');
+require_once('Zend/Feed/Rss.php');
 
 class CommentController extends Controller
 {
@@ -28,7 +31,7 @@ class CommentController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'feed'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -167,5 +170,36 @@ class CommentController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function actionFeed()
+	{
+	    if (isset($_GET['pid']))
+	       $projectId = intval($_GET['pid']);
+	    else 
+	       $projectId = null;
+	       
+        $comments = Comment::model()->findRecentComments(20, $projectId);
+        $entries = array();
+        foreach ($comments as $comment)
+        {
+            $entries[] = array(
+                'title' => $comment->issue->name,
+                'link' => CHtml::encode($this->createAbsoluteUrl('issue/view', array('id'=>$comment->issue->id))),
+                'description' => $comment->author->username . ' says: ' . $comment->content,
+                'lastUpdate' => strtotime($comment->create_time),
+                'author' => $comment->author->username,
+            );
+        }
+        
+        //header('Content-type: application/rss+xml; charset=UTF-8');
+        $feed = Zend_Feed::importArray(array(
+            'title' => 'Trackstar Project Comments Feed',
+            'link' => $this->createUrl(''),
+            'charset' => 'UTF-8',
+            'entries' => $entries,
+        ), 'rss');
+        
+        $feed->send();
 	}
 }

@@ -1031,3 +1031,85 @@ Stack trace:
 REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/view&id=1
 HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/view&id=1
 ---
+2012/12/07 16:05:27 [error] [php] require_once(Zend/Uri.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (/home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder/Header.php:31)
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed.php(391): require_once()
+#1 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/CommentController.php(200): importArray()
+#2 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(50): CommentController->actionFeed()
+#3 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): CommentController->runAction()
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CommentController->filterAccessControl()
+#8 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#10 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CommentController->runActionWithFilters()
+#11 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CommentController->run()
+#12 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#13 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/tours/yii/trackstar/index.php?r=comment/feed
+in /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder/Header.php (31)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder/Header.php (31)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder.php (32)
+2012/12/07 16:07:45 [error] [php] require_once(Zend/Uri.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (/home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder/Header.php:31)
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed.php(391): require_once()
+#1 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/CommentController.php(200): importArray()
+#2 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(50): CommentController->actionFeed()
+#3 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): CommentController->runAction()
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#7 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CommentController->filterAccessControl()
+#8 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#10 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CommentController->runActionWithFilters()
+#11 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CommentController->run()
+#12 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#13 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/tours/yii/trackstar/index.php?r=comment/feed
+in /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder/Header.php (31)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder/Header.php (31)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/vendors/Zend/Feed/Builder.php (32)
+2012/12/07 16:44:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action " commentFeed".' in /home/dengwei/var/www/tours/yii/framework/web/CController.php:484
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/CController.php(271): CController->missingAction(' commentFeed')
+#1 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run(' commentFeed')
+#2 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/ commentFe...')
+#3 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php/1/commentFeed.xml
+---
+2012/12/07 16:44:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action " commentFeed".' in /home/dengwei/var/www/tours/yii/framework/web/CController.php:484
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/CController.php(271): CController->missingAction(' commentFeed')
+#1 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run(' commentFeed')
+#2 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/ commentFe...')
+#3 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php/2/commentFeed.xml
+---
+2012/12/07 17:05:03 [error] [php] Missing argument 1 for ProjectController::loadModel(), called in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/ProjectController.php on line 67 and defined (/home/dengwei/var/www/tours/yii/trackstar/protected/controllers/ProjectController.php:172)
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): ProjectController->runAction()
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): ProjectController->filterAccessControl()
+#7 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): ProjectController->runActionWithFilters()
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): ProjectController->run()
+#11 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/tours/yii/trackstar/index.php/project/view/id/1
+in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/ProjectController.php (172)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/ProjectController.php (67)
+in /home/dengwei/var/www/tours/yii/trackstar/index.php (13)

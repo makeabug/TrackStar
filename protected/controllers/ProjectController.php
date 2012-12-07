@@ -60,6 +60,12 @@ class ProjectController extends Controller
                     ),
                     'pagination' => array('pageSize' => 1),
         ));
+        
+        Yii::app()->clientScript->registerLinkTag( 
+            'alternate',
+            'application/rss+xml',
+            $this->createUrl('comment/feed',array('pid'=>$this->loadModel()->id)));
+        
         $this->render('view', array(
             'model' => $this->loadModel($id),
             'issueDataProvider' => $issueDataProvider,
@@ -133,6 +139,11 @@ class ProjectController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Project');
+		Yii::app()->clientScript->registerLinkTag(
+		  'alternate',
+		  'application/rss+xml',
+		  $this->createUrl('comment/feed')
+		);
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -158,11 +169,14 @@ class ProjectController extends Controller
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id)
+	public function loadModel()
 	{
-		$model=Project::model()->findByPk($id);
+	    if (isset($_GET['id']))
+		  $model=Project::model()->findByPk($_GET['id']);
+		  
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
+			
 		return $model;
 	}
 
