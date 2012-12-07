@@ -719,3 +719,315 @@ Stack trace:
 REQUEST_URI=/tours/yii/trackstar/index.php?r=project/adduser&id=1
 HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/view&id=1
 ---
+2012/12/07 10:16:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to per-form this action.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/ProjectController.php:187
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(50): ProjectController->actionAdduser()
+#1 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('adduser')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('project/adduser')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=project/adduser&id=1
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/view&id=1
+---
+2012/12/07 10:30:23 [error] [exception.CException] exception 'CException' with message 'CDbAuthManager and its behaviors do not have a method or closure named "getRole".' in /home/dengwei/var/www/tours/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/models/Project.php(29): CComponent->__call('getRole', Array)
+#1 /home/dengwei/var/www/tours/yii/trackstar/protected/models/Project.php(29): CDbAuthManager->getRole()
+#2 /home/dengwei/var/www/tours/yii/trackstar/protected/views/project/adduser.php(38): Project::getUserRoleOptions()
+#3 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(127): require('/home/dengwei/v...')
+#4 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/dengwei/v...', Array, true)
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/dengwei/v...', Array, true)
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(783): CController->renderPartial('adduser', Array, true)
+#7 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/ProjectController.php(209): CController->render('adduser', Array)
+#8 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(50): ProjectController->actionAdduser()
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#16 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('adduser')
+#18 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('project/adduser')
+#19 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=project/adduser&id=1
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/view&id=1
+---
+2012/12/07 10:33:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/index')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/create&pid=1
+---
+2012/12/07 10:35:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/create
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/index&pid=1
+---
+2012/12/07 10:35:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('project/admin')
+#9 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/index
+---
+2012/12/07 10:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/index')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/create&pid=1
+---
+2012/12/07 10:37:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject('')
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/create')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/create&pid=
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/index&pid=1
+---
+2012/12/07 10:41:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/index')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/create&pid=1
+---
+2012/12/07 10:41:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/admin')
+#9 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/admin&pid=1
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/index&pid=1
+---
+2012/12/07 10:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "omment/create.".' in /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php:287
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('omment/create.')
+#1 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=omment/create.
+---
+2012/12/07 10:49:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create.".' in /home/dengwei/var/www/tours/yii/framework/web/CController.php:484
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/CController.php(271): CController->missingAction('create.')
+#1 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('create.')
+#2 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('comment/create.')
+#3 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=comment/create.
+---
+2012/12/07 11:20:31 [error] [php] Missing argument 1 for IssueController::loadModel(), called in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php on line 95 and defined (/home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:206)
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): IssueController->runAction()
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterAccessControl()
+#7 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): IssueController->runActionWithFilters()
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): IssueController->run()
+#11 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/view&id=1
+in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php (206)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php (95)
+in /home/dengwei/var/www/tours/yii/trackstar/index.php (13)
+2012/12/07 11:20:59 [error] [php] Missing argument 1 for IssueController::loadModel(), called in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php on line 95 and defined (/home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:206)
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): IssueController->runAction()
+#4 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterAccessControl()
+#7 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): IssueController->runActionWithFilters()
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): IssueController->run()
+#11 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/view&id=1
+in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php (206)
+in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php (95)
+in /home/dengwei/var/www/tours/yii/trackstar/index.php (13)
+2012/12/07 11:21:56 [error] [exception.CException] exception 'CException' with message 'IssueController and its behaviors do not have a method or closure named "renderPertial".' in /home/dengwei/var/www/tours/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/views/issue/view.php(61): CComponent->__call('renderPertial', Array)
+#1 /home/dengwei/var/www/tours/yii/trackstar/protected/views/issue/view.php(61): IssueController->renderPertial('/comment/_form', Array)
+#2 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(127): require('/home/dengwei/v...')
+#3 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/dengwei/v...', Array, true)
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/dengwei/v...', Array, true)
+#5 /home/dengwei/var/www/tours/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#6 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(100): CController->render('view', Array)
+#7 [internal function]: IssueController->actionView('1')
+#8 /home/dengwei/var/www/tours/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#10 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#17 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#19 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/view')
+#20 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#21 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/view&id=1
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=project/view&id=1
+---
+2012/12/07 11:23:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested project does not exist.' in /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php:52
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(37): IssueController->loadProject(NULL)
+#1 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): IssueController->filterProjectContext(Object(CFilterChain))
+#2 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#3 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#5 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('index')
+#10 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/index')
+#11 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/view&id=1
+---
+2012/12/07 11:28:18 [error] [exception.CException] exception 'CException' with message 'Property "Comment.context" is not defined.' in /home/dengwei/var/www/tours/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /home/dengwei/var/www/tours/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('context')
+#1 /home/dengwei/var/www/tours/yii/trackstar/protected/views/issue/_comments.php(12): CActiveRecord->__get('context')
+#2 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(127): require('/home/dengwei/v...')
+#3 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/dengwei/v...', Array, true)
+#4 /home/dengwei/var/www/tours/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/dengwei/v...', Array, true)
+#5 /home/dengwei/var/www/tours/yii/trackstar/protected/views/issue/view.php(51): CController->renderPartial('_comments', Array)
+#6 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(127): require('/home/dengwei/v...')
+#7 /home/dengwei/var/www/tours/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/home/dengwei/v...', Array, true)
+#8 /home/dengwei/var/www/tours/yii/framework/web/CController.php(870): CBaseController->renderFile('/home/dengwei/v...', Array, true)
+#9 /home/dengwei/var/www/tours/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#10 /home/dengwei/var/www/tours/yii/trackstar/protected/controllers/IssueController.php(100): CController->render('view', Array)
+#11 [internal function]: IssueController->actionView('1')
+#12 /home/dengwei/var/www/tours/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#13 /home/dengwei/var/www/tours/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#14 /home/dengwei/var/www/tours/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /home/dengwei/var/www/tours/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /home/dengwei/var/www/tours/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /home/dengwei/var/www/tours/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /home/dengwei/var/www/tours/yii/framework/web/CController.php(292): CFilterChain->run()
+#21 /home/dengwei/var/www/tours/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(283): CController->run('view')
+#23 /home/dengwei/var/www/tours/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('issue/view')
+#24 /home/dengwei/var/www/tours/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /home/dengwei/var/www/tours/yii/trackstar/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/tours/yii/trackstar/index.php?r=issue/view&id=1
+HTTP_REFERER=http://www.lc/tours/yii/trackstar/index.php?r=issue/view&id=1
+---

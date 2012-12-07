@@ -121,7 +121,7 @@ class ProjectTest extends CDbTestCase
     public function testUserProjectAssignment() {
         //since our fixture data already has the two users 
         //assigned to project 1, we'll assign user 1 to project 2
-        $this->projects('project2')->associateUserToProject($this- >users('user1'));
+        $this->projects('project2')->associateUserToProject($this->users('user1'));
         $this->assertTrue($this->projects('project1')->isUserInProject($this->users('user1')));
     }
         

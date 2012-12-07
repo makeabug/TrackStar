@@ -23,6 +23,26 @@ class Comment extends TrackStarActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public static function findRecentComments($limit=10, $projectId=null)
+	{
+	    if ($projectId != null)
+	    {
+	        return self::model()->with(array(
+	           'issue' => array(
+	               'condition' => 'project_id=' . $projectId
+	           ),
+	        ))->findAll(array(
+	           'order' => 't.create_time DESC',
+	           'limit' => $limit,
+	        ));
+	    } else {
+	        return self::model()->with('issue')->findAll(array(
+	           'order' => 't.create_time DESC',
+	           'limit' => $limit,
+	        ));
+	    }
+	}
 
 	/**
 	 * @return string the associated database table name
@@ -57,6 +77,8 @@ class Comment extends TrackStarActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'author' => array(self::BELONGS_TO , 'User', 'create_user_id'),
+            'issue' => array(self::BELONGS_TO , 'Issue', 'issue_id'),
 		);
 	}
 

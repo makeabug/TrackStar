@@ -21,6 +21,7 @@ return array(
     'description' => 'This is test project 3',
     'create_time' => '',
     'create_user_id' => '',
-    'update_time' => '',   'update_user_id' => '',
+    'update_time' => '',   
+    'update_user_id' => '',
   ),
 );
