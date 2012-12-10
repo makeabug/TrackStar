@@ -100,5 +100,8 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+	
+	'homeUrl'=> Yii::app()->request->baseUrl . '/index.php/project',
+	//'theme'=>'new',
 
 );
